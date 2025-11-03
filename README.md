@@ -9,3 +9,5 @@
 5. change login request role email to username so that user can login using username insted of email
 
 6. admin dashboard setup
+
+7. segmentation of admin dashboard
