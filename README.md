@@ -17,3 +17,7 @@
 9. costomize admin login form
 
 10. add toastr message on admin login
+
+11. customize admin forgot-password page
+
+12. coustomize reset password page
