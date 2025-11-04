@@ -11,3 +11,5 @@
 6. admin dashboard setup
 
 7. segmentation of admin dashboard
+
+8. add admin logout functionallity
