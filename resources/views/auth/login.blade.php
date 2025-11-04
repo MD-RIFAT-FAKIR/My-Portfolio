@@ -40,6 +40,7 @@
       height: 100%;
     }
   </style>
+
 </head>
 <body>
 	<div class="main-wrapper">
@@ -59,9 +60,12 @@
                   <div class="auth-form-wrapper px-4 py-5">
                     <a href="#" class="noble-ui-logo logo-light d-block mb-2">My-<span>Portfolio</span></a>
                     <h5 class="text-muted fw-normal mb-4">Welcome back! Log in to your account.</h5>
-                    @if (session('status'))
-                        <div class="alert alert-success">{{ session('status') }}</div>
+
+                    @if (session('success'))
+                      <div class="alert alert-success">{{ session('success') }}</div>
                     @endif
+
+
                     <form class="forms-sample" action="{{ route('login') }}" method="POST">
                         @csrf
                       <div class="mb-3">
