@@ -61,8 +61,8 @@
                     <a href="#" class="noble-ui-logo logo-light d-block mb-2">My-<span>Portfolio</span></a>
                     <h5 class="text-muted fw-normal mb-4">Welcome back! Log in to your account.</h5>
 
-                    @if (session('success'))
-                      <div class="alert alert-success">{{ session('success') }}</div>
+                    @if (session('status'))
+                      <div class="alert alert-success">{{ session('status') }}</div>
                     @endif
 
 
@@ -87,7 +87,7 @@
                           Login
                         </button>
                       </div>
-                      <a href="register.html" class="d-block mt-3 text-muted" style="text-decoration: underline">Forgot your password?</a>
+                      <a href="{{ route('password.request') }}" class="d-block mt-3 text-muted" style="text-decoration: underline">Forgot your password?</a>
                     </form>
                   </div>
                 </div>

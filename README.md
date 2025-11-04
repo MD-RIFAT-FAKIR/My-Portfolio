@@ -13,3 +13,7 @@
 7. segmentation of admin dashboard
 
 8. add admin logout functionallity
+
+9. costomize admin login form
+
+10. add toastr message on admin login
