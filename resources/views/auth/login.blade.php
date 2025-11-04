@@ -59,15 +59,24 @@
                   <div class="auth-form-wrapper px-4 py-5">
                     <a href="#" class="noble-ui-logo logo-light d-block mb-2">My-<span>Portfolio</span></a>
                     <h5 class="text-muted fw-normal mb-4">Welcome back! Log in to your account.</h5>
+                    @if (session('status'))
+                        <div class="alert alert-success">{{ session('status') }}</div>
+                    @endif
                     <form class="forms-sample" action="{{ route('login') }}" method="POST">
                         @csrf
                       <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" name="username" placeholder="Username">
+                        <input type="text" class="form-control @error('username') is-invalid @enderror" name="username" placeholder="Username">
+                        @error('username')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                       </div>
                       <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" name="password" autocomplete="current-password" placeholder="Password">
+                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password" placeholder="Password">
+                        @error('password')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                       </div>
                       <div>
                         <button type="submit" class="btn btn-outline-primary btn-icon-text mb-2 mb-md-0">
