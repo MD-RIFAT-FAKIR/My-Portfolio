@@ -21,3 +21,7 @@
 11. customize admin forgot-password page
 
 12. coustomize reset password page
+
+13. admin edit profile page setup
+
+14. image preview functionallity add on admin profile edit page

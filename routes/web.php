@@ -20,6 +20,8 @@ Route::middleware('auth')->group(function() {
     Route::get('/admin/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout');
     //admin edit profile 
     Route::get('admin-edit-profile', [AdminController::class, 'AdminEditProfile'])->name('admin.edit.profile');
+    //admin update profile 
+    Route::post('admin-update-profile', [AdminController::class, 'AdminUpdateProfile'])->name('admin.update.profile');
 
 
 });

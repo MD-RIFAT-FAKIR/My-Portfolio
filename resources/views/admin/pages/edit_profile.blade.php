@@ -6,7 +6,10 @@
   <div class="card">
     <div class="card-body">
       <h6 class="card-title">Edit Profile</h6>
-      <form class="forms-sample">
+      <form class="forms-sample" action="{{ route('admin.update.profile') }}" method="POST" enctype="multipart/form-data">
+
+        @csrf
+
         <div class="row mb-3">
           <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Username</label>
           <div class="col-sm-9">
@@ -22,16 +25,16 @@
         <div class="row mb-3">
           <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Profile Photo</label>
           <div class="col-sm-9">
-            <input class="form-control" type="file" id="Image">
+            <input class="form-control" type="file" name="photo" id="Image">
           </div>
         </div>
         <div class="row mb-3">
           <label for="exampleInputEmail2" class="col-sm-3 col-form-label"></label>
           <div class="col-sm-9">
-            <img id="showImage" src="{{ asset('uploads/no-img-avatar.png') }}" alt="" style="width: 90px; height: 90px;">
+            <img id="showImage" src="{{ !empty($admin->photo) ? asset($admin->photo) : asset('uploads/no-img-avatar.png') }}" alt="" style="width: 90px; height: 90px;">
           </div>
         </div>
-        <button class="btn btn-secondary">Update</button>
+        <button type="submit" class="btn btn-secondary">Update</button>
       </form>
     </div>
   </div>
