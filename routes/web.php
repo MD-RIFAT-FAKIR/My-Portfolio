@@ -18,7 +18,7 @@ Route::middleware('auth')->group(function() {
 
     //admin logout
     Route::get('/admin/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout');
-    //admin logout
+    //admin edit profile 
     Route::get('admin-edit-profile', [AdminController::class, 'AdminEditProfile'])->name('admin.edit.profile');
 
 
@@ -38,7 +38,7 @@ Route::middleware('auth')->group(function() {
 
 
 
-
+require __DIR__.'/auth.php';
 
 
 
@@ -69,4 +69,4 @@ Route::middleware('auth')->group(function() {
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
 
-// require __DIR__.'/auth.php';
+
