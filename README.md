@@ -29,3 +29,7 @@
 15. update admin profile and store to db
 
 16. index page setup of admin dashboard
+
+17. change password page setup of admin
+
+18. update admin password
