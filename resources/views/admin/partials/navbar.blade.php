@@ -1,3 +1,9 @@
+{{-- get admin data from user model --}}
+  @php
+      $admin = App\Models\User::findOrFail(Auth::user()->id);
+  @endphp
+{{--  end get admin data from user model --}}
+
 <nav class="navbar">
 				<a href="#" class="sidebar-toggler">
 					<i data-feather="menu"></i>
@@ -21,13 +27,6 @@
 							<a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<img class="wd-30 ht-30 rounded-circle" src=" {{ ($admin->photo) ? asset($admin->photo) : asset('uploads/no-img-avatar.png')  }}" alt="profile">
 							</a>
-
-              {{-- get admin data from user model --}}
-              @php
-                  $admin = App\Models\User::findOrFail(Auth::user()->id);
-              @endphp
-              {{--  end get admin data from user model --}}
-
 							<div class="dropdown-menu p-0" aria-labelledby="profileDropdown">
 								<div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
 									<div class="mb-3">
@@ -52,9 +51,9 @@
                     </a>
                   </li>
                   <li class="dropdown-item py-2">
-                    <a href="javascript:;" class="text-body ms-0">
+                    <a href="{{ route('admin.change.password') }}" class="text-body ms-0">
                       <i class="me-2 icon-md" data-feather="repeat"></i>
-                      <span>Switch User</span>
+                      <span>Change Password</span>
                     </a>
                   </li>
                   <li class="dropdown-item py-2">
