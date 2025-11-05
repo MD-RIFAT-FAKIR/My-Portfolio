@@ -1,14 +1,27 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\backend\AdminController;
-
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\frontend\FrontendController;
 
 
+
+
+//================================  Frontend all routes ======================================//
+//frontend home page
+Route::get('/', [FrontendController::class, 'homepage'])->name('home');
+
+
+//================================ End Frontend all routes ===================================//
+
+
+
+
+
+
+
+
+//================================ Backend all routes ===================================//
 
 Route::middleware('auth')->group(function() {
     //admin dashboard
@@ -36,7 +49,7 @@ Route::middleware('auth')->group(function() {
 
 
 
-
+//================================ End Backend all routes ===================================//
 
 
 
