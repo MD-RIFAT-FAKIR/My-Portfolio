@@ -54,7 +54,7 @@ class AdminController extends Controller
 
             $notification = ([
                 'message'    => 'Profile Update With Photo Successfully.',
-                'alert-type' => 'success',
+                'alert-type' => 'info',
             ]);
 
             return redirect()->back()->with($notification);
@@ -68,10 +68,10 @@ class AdminController extends Controller
 
             $notification = ([
                 'message'    => 'Profile Update Without Photo Successfully.',
-                'alert-type' => 'success',
+                'alert-type' => 'info',
             ]);
 
             return redirect()->back()->with($notification);
         }
-    }
+    }//end method
 }

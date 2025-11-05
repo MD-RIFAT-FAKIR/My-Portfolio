@@ -25,3 +25,7 @@
 13. admin edit profile page setup
 
 14. image preview functionallity add on admin profile edit page
+
+15. update admin profile and store to db
+
+16. index page setup of admin dashboard
