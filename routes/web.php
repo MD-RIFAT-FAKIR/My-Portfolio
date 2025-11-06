@@ -47,9 +47,17 @@ Route::middleware('auth')->group(function() {
 
 
     //----------------------Hero Section all route-----------------------//
-    Route::get('/hero-section', [HeroConroller::class, 'HeroSection'])->name('hero.section');
 
 
+    Route::controller(HeroConroller::class)->group(function() {
+        //hero section edit page
+        Route::get('/hero-section', 'HeroSection')->name('hero.section');
+
+        //hero section update store
+        Route::post('/update-hero-section','UpdateHeroSection')->name('update.hero.section');
+
+
+    });
 
     //----------------------End Hero Section all route-------------------//
 

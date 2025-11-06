@@ -6,11 +6,12 @@
   <div class="card">
     <div class="card-body">
       <h6 class="card-title">Hero Section Edit</h6>
-        <form>
+        <form action="{{ route('update.hero.section') }}" method="POST" enctype="multipart/form-data">
+          @csrf
           <div class="row">
             <div class="col-sm-4">
               <div class="mb-4">
-                <img id="showImage" src="{{ !empty($admin->photo) ? asset($admin->photo) : asset('uploads/no-img-avatar.png') }}" alt="" style="width: 150px; height: 150px; border-radius: 5px">
+                <img id="showImage" src="{{ !empty($hero->photo) ? asset($hero->photo) : asset('uploads/no-img-avatar.png') }}" alt="" style="width: 150px; height: 150px; border-radius: 10px">
               </div>
             </div><!-- Col -->
           </div><!-- Row -->
@@ -24,13 +25,13 @@
             <div class="col-sm-4">
               <div class="mb-3">
                 <label class="form-label">Name</label>
-                <input type="text" name="name" class="form-control" placeholder="Name">
+                <input type="text" name="name" class="form-control" value="{{ $hero->name }}">
               </div>
             </div><!-- Col -->
             <div class="col-sm-4">
               <div class="mb-4">
                 <label class="form-label">Profession</label>
-                <input type="text" class="form-control" name="profession" placeholder="Profession">
+                <input type="text" class="form-control" name="profession" value="{{ $hero->profession }}">
               </div>
             </div><!-- Col -->
           </div><!-- Row -->
@@ -38,25 +39,25 @@
             <div class="col-sm-3">
               <div class="mb-3">
                 <label class="form-label">Twitter URL</label>
-                <input type="text" class="form-control" name="twitter_url" placeholder="Twitter URL">
+                <input type="text" class="form-control" name="twitter_url" value="{{ $hero->twitter_url }}">
               </div>
             </div><!-- Col -->
             <div class="col-sm-3">
               <div class="mb-3">
                 <label class="form-label">YouToube URL</label>
-                <input type="text" class="form-control" name="youtube_url" placeholder="YouToube URL">
+                <input type="text" class="form-control" name="youtube_url" value="{{ $hero->youtube_url }}">
               </div>
             </div><!-- Col -->
             <div class="col-sm-3">
               <div class="mb-4">
                 <label class="form-label">Linkedin URL</label>
-                <input type="text" class="form-control" name="linkdin_url" placeholder="Linkedin URL">
+                <input type="text" class="form-control" name="linkdin_url" value="{{ $hero->linkdin_url }}">
               </div>
             </div><!-- Col -->
             <div class="col-sm-3">
               <div class="mb-3">
                 <label class="form-label">GitHub URL</label>
-                <input type="text" class="form-control" name="github_url" placeholder="GitHub URL">
+                <input type="text" class="form-control" name="github_url" value="{{ $hero->github_url }}">
               </div>
             </div><!-- Col -->
           </div><!-- Row -->
@@ -64,19 +65,19 @@
             <div class="col-sm-4">
               <div class="mb-3">
                 <label class="form-label">Year Of Experience</label>
-                <input type="text" class="form-control" name="YOE" placeholder="Year Of Experience">
+                <input type="text" class="form-control" name="YOE" value="{{ $hero->YOE }}">
               </div>
             </div><!-- Col -->
             <div class="col-sm-4">
               <div class="mb-4">
                 <label class="form-label">Project Completed</label>
-                <input type="text" class="form-control" name="PC" placeholder="Project Completed">
+                <input type="text" class="form-control" name="PC" value="{{ $hero->PC }}">
               </div>
             </div><!-- Col -->
             <div class="col-sm-4">
               <div class="mb-3">
                 <label class="form-label">Happy Client</label>
-                <input type="text" class="form-control" name="HC" placeholder="Happy Client">
+                <input type="text" class="form-control" name="HC" value="{{ $hero->HC }}">
               </div>
             </div><!-- Col -->
           </div><!-- Row -->
@@ -92,12 +93,12 @@
              <div class="col-sm-12">
               <div class="mb-4">
                 <label for="short_desc" class="form-label">Short Description</label>
-										<textarea class="form-control" name="short_desc" id="short_desc" rows="5"></textarea>
+										<textarea class="form-control" name="short_desc" rows="5">{{ $hero->short_desc }}</textarea>
               </div>
             </div><!-- Col -->
           </div>
+          <button type="submit" class="btn btn-primary">Update Hero Section</button>
         </form>
-        <button type="button" class="btn btn-primary submit">Update Hero Section</button>
     </div>
   </div>
 </div>
