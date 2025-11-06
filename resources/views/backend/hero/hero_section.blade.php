@@ -10,7 +10,7 @@
           <div class="row">
             <div class="col-sm-4">
               <div class="mb-4">
-                <img id="showImage" src="{{ !empty($admin->photo) ? asset($admin->photo) : asset('uploads/no-img-avatar.png') }}" alt="" style="width: 90px; height: 90px;">
+                <img id="showImage" src="{{ !empty($admin->photo) ? asset($admin->photo) : asset('uploads/no-img-avatar.png') }}" alt="" style="width: 150px; height: 150px; border-radius: 5px">
               </div>
             </div><!-- Col -->
           </div><!-- Row -->
@@ -102,4 +102,21 @@
   </div>
 </div>
     
+
+
+  {{-- image preview functionallity  --}}
+  <script>
+    $(document).ready(function() {
+      $('#Image').on('change', function(e) {
+        let reader = new FileReader();
+        reader.onload = function(e) {
+          $('#showImage').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(e.target.files[0]);
+      });
+    });
+  </script>
+  {{-- end image preview functionallity  --}}
+
+
 @endsection
