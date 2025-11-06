@@ -5,6 +5,9 @@ namespace App\Http\Controllers\backend;
 use App\Models\Hero;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
+
 
 class HeroConroller extends Controller
 {
