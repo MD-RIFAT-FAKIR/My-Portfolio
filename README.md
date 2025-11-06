@@ -33,3 +33,7 @@
 17. change password page setup of admin
 
 18. update admin password
+
+19. frontend home page setup
+
+20. frontend home page segmentation
