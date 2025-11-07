@@ -20,7 +20,7 @@
                   {{ $hero->short_desc }}
                 </p>
                 <div class="button-box d-flex flex-wrap align-items-center">
-                  <a href="#" class="btn tj-btn-secondary">Download CV <i class="flaticon-download"></i></a>
+                  <a href="{{ route('resume.download') }}" class="btn tj-btn-secondary">Download CV <i class="flaticon-download"></i></a>
                   <ul class="ul-reset social-icons">
                       <li>
                         <a href="{{ $hero->twitter_url }}"><i class="fa-brands fa-twitter"></i></a>

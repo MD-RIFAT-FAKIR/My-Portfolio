@@ -12,6 +12,8 @@ use App\Http\Controllers\frontend\FrontendController;
 //frontend home page
 Route::get('/', [FrontendController::class, 'homepage'])->name('home');
 
+Route::get('/resume-downlaod', [FrontendController::class, 'resumeDownload'])->name('resume.download');
+
 //================================ End Frontend all routes ===================================//
 
 

@@ -26,7 +26,8 @@ class HeroConroller extends Controller
         //when photo file selectd 
         if(!empty($request->file('photo'))) {
 
-            if(!empty($hero->photo && public_path($hero->photo))) { // replase old by new one
+            // replase old by new one
+            if(!empty($hero->photo && file_exists(public_path($hero->photo)))) { 
                 unlink(public_path($hero->photo));
             }
             
@@ -68,7 +69,8 @@ class HeroConroller extends Controller
         //when resume file selected
         }elseif(!empty($request->file('resume'))) {
 
-            if(!empty($hero->resume && public_path($hero->resume))) { //replace old by new one
+            //replace old by new one
+            if(!empty($hero->resume && file_exists(public_path($hero->resume)))) { 
                 unlink(public_path($hero->resume));
             }
 
@@ -80,7 +82,7 @@ class HeroConroller extends Controller
             Hero::find(1)->update([
                 'name'        => $request->name,
                 'profession'  => $request->profession,
-                'resume'       => $savePath,
+                'resume'      => $savePath,
                 'short_desc'  => $request->short_desc,
                 'twitter_url' => $request->twitter_url,
                 'youtube_url' => $request->youtube_url,
