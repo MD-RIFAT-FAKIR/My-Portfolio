@@ -15,14 +15,17 @@ class FrontendController extends Controller
 
     //resume download 
     public function resumeDownload() {
-        $hero = Hero::find(1);
-        $file = $hero->resume;
 
-        if(file_exists(public_path($file))) {
-            return response()->download($file);
+        $hero = Hero::find(1);
+
+        $file = $hero->resume;
+        $path = public_path($file);
+
+        if(file_exists($path)) {
+            return response()->download($path);
         }else{
             return redirect()->back()->with('error', 'Resume Not Found !');
         }
         
-    }
+    }//end method
 }
