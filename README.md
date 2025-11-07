@@ -37,3 +37,7 @@
 19. frontend home page setup
 
 20. frontend home page segmentation
+
+21. hero section edit page setup from admin dashboard
+
+22. update hore section and store to DB
