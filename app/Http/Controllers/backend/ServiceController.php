@@ -38,7 +38,7 @@ class ServiceController extends Controller
             'alert-type' => 'info'
         ]);
 
-        return redirect()->route('all.serive')->with($notification);
+        return redirect()->route('all.service')->with($notification);
 
     }//end store service 
 
@@ -73,5 +73,23 @@ class ServiceController extends Controller
         return redirect()->route('all.service')->with($notification);
 
 
+    }//end update service
+
+
+
+
+    //delete service
+    public function deleteService($id) {
+        Service::findOrFail($id)->delete();
+
+         $notification = ([
+            'message'    => 'Service Deleted Successfully',
+            'alert-type' => 'error'
+        ]);
+
+        return redirect()->back()->with($notification);
     }
+
+
+
 }

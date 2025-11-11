@@ -84,6 +84,9 @@ Route::middleware('auth')->group(function() {
         
         //update service
         Route::post('/update-service/{id}', 'updateService')->name('update.service');
+
+        //delete service
+        Route::get('/delete.service/{id}', 'deleteService')->name('delete.service');
         
         
     });
