@@ -14,4 +14,8 @@ class ServiceController extends Controller
         return view('backend.service.all_service', compact('services'));
     }
     
+    //add service
+    public function addService() {
+        return view('backend.service.add_service');
+    }
 }

@@ -73,6 +73,9 @@ Route::middleware('auth')->group(function() {
         //all service page
         Route::get('/all-serive', 'allService')->name('all.serive');
 
+        //all service page
+        Route::get('/add-serive', 'addService')->name('add.serive');
+
         
         
     });
