@@ -22,7 +22,7 @@
                   <td>{!! Str::wordWrap($service->service_description, 60, '<br>') !!}</td>
                   <td>
                     <a href="{{ route('edit.service', $service->id) }}" class="btn btn-inverse-light" style="margin-right: 6px">Edit</a>
-                    <a type="button" class="btn btn-inverse-danger">Delete</a>
+                    <a class="btn btn-inverse-danger" id="delete">Delete</a>
                   </td>                        
               </tr>
             @endforeach  

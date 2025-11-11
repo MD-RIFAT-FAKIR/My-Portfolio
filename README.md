@@ -51,3 +51,9 @@
 26. add service page setup of admin dashboard
 
 27. store servies ot database
+
+28. edit services
+
+29. update service
+
+30. delete service

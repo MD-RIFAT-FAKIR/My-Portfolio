@@ -128,5 +128,11 @@
   <script src="{{ asset('../../../backend/assets/js/data-table.js') }}"></script>
 	<!-- End custom js for this page -->
 
+	{{-- sweet alert for delete confirmation --}}
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+ 	<script src="{{ asset('backend/assets/js/code.js') }}"></script>
+	{{-- end sweet alert for delete confirmation --}}
+
 </body>
 </html>    
