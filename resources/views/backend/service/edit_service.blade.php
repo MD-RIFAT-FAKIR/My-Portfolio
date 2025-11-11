@@ -6,7 +6,7 @@
   <div class="card">
     <div class="card-body">
       <h6 class="card-title">Edit Service</h6>
-      <form class="forms-sample" action="{{ route('store.service') }}" method="POST" >
+      <form class="forms-sample" action="{{ route('update.service', $service->id) }}" method="POST" >
 
         @csrf
 

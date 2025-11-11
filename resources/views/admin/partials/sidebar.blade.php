@@ -34,10 +34,10 @@
             <div class="collapse" id="uiComponents">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="{{ route('add.serive') }}" class="nav-link">Add Service</a>
+                  <a href="{{ route('add.service') }}" class="nav-link">Add Service</a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('all.serive') }}" class="nav-link">All Service</a>
+                  <a href="{{ route('all.service') }}" class="nav-link">All Service</a>
                 </li>
               </ul>
             </div>

@@ -49,4 +49,29 @@ class ServiceController extends Controller
        $service = Service::findOrFail($id);
        return view('backend.service.edit_service', compact('service'));
     }
+
+
+    //update service
+    public function updateService(Request $request, $id) {
+
+        $request->validate([
+            'service_title'       => 'required',
+            'service_description' => 'required',
+        ]);
+
+        Service::where('id', $id)->update([
+            'service_title'       => $request->service_title,
+            'service_description' => $request->service_description
+        ]);
+
+        $notification = ([
+            'message'    => 'Service Updated Successfully',
+            'alert-type' => 'success'
+        ]);
+
+
+        return redirect()->route('all.service')->with($notification);
+
+
+    }
 }

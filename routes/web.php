@@ -71,17 +71,19 @@ Route::middleware('auth')->group(function() {
 
     Route::controller(ServiceController::class)->group(function() {
         //all service page
-        Route::get('/all-serive', 'allService')->name('all.serive');
+        Route::get('/all-service', 'allService')->name('all.service');
 
         //all service page
-        Route::get('/add-serive', 'addService')->name('add.serive');
+        Route::get('/add-service', 'addService')->name('add.service');
 
         //store service
         Route::post('/store-service', 'storeService')->name('store.service');
-
+        
         //edit service
         Route::get('/edit-service/{id}', 'editService')->name('edit.service');
-
+        
+        //update service
+        Route::post('/update-service/{id}', 'updateService')->name('update.service');
         
         
     });
