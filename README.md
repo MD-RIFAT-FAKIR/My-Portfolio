@@ -41,3 +41,5 @@
 21. hero section edit page setup from admin dashboard
 
 22. update hore section and store to DB
+
+23. download cv functionallity in frontend

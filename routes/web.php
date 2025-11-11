@@ -12,7 +12,6 @@ use App\Http\Controllers\frontend\FrontendController;
 //frontend home page
 Route::get('/', [FrontendController::class, 'homepage'])->name('home');
 
-Route::get('/resume-downlaod', [FrontendController::class, 'resumeDownload'])->name('resume.download');
 
 //================================ End Frontend all routes ===================================//
 
@@ -58,7 +57,7 @@ Route::middleware('auth')->group(function() {
         //hero section update store
         Route::post('/update-hero-section','UpdateHeroSection')->name('update.hero.section');
 
-
+        
     });
 
     //----------------------End Hero Section all route-------------------//
@@ -70,6 +69,8 @@ Route::middleware('auth')->group(function() {
 
 });
 
+    //resume download
+    Route::get('/resume-downlaod', [HeroConroller::class, 'resumeDownload'])->name('resume.download');
 
 
 //================================ End Backend all routes ===================================//
