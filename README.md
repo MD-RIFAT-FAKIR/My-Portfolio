@@ -47,3 +47,5 @@
 24. make model,migrations and controller for services
 
 25. all serices page setup of admin dashboard
+
+26. add service page setup of admin dashboard

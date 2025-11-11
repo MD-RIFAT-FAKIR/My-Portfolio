@@ -18,4 +18,26 @@ class ServiceController extends Controller
     public function addService() {
         return view('backend.service.add_service');
     }
+
+    //store service
+    public function storeService(Request $request) {
+        // dd($request->all());
+
+        $request->validate([
+            'service_title'       => 'required',
+            'service_description' => 'required',
+        ]);
+
+        Service::create([
+            'service_title'       => $request->service_title,
+            'service_description' => $request->service_description,
+        ]);
+
+        $notification = ([
+            'message'    => 'Service Add Successully',
+            'alert-type' => 'info'
+        ]);
+
+        return redirect()->route('all.serive')->with($notification);
+    }
 }

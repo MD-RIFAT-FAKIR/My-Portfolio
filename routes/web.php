@@ -76,6 +76,9 @@ Route::middleware('auth')->group(function() {
         //all service page
         Route::get('/add-serive', 'addService')->name('add.serive');
 
+        //store service
+        Route::post('/store-service', 'storeService')->name('store.service');
+
         
         
     });
