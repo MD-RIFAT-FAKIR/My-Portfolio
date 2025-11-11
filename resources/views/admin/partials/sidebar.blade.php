@@ -28,19 +28,16 @@
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false" aria-controls="uiComponents">
               <i class="link-icon" data-feather="feather"></i>
-              <span class="link-title">UI Kit</span>
+              <span class="link-title">Services</span>
               <i class="link-arrow" data-feather="chevron-down"></i>
             </a>
             <div class="collapse" id="uiComponents">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="pages/ui-components/accordion.html" class="nav-link">Accordion</a>
+                  <a href="{{ route('all.serive') }}" class="nav-link">All Service</a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/ui-components/alerts.html" class="nav-link">Alerts</a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/ui-components/badges.html" class="nav-link">Badges</a>
+                  <a href="pages/ui-components/alerts.html" class="nav-link">Add Service</a>
                 </li>
               </ul>
             </div>

@@ -43,3 +43,7 @@
 22. update hore section and store to DB
 
 23. download cv functionallity in frontend
+
+24. make model,migrations and controller for services
+
+25. all serices page setup of admin dashboard

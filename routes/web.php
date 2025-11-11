@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\HeroConroller;
+use App\Http\Controllers\backend\AdminController;
+use App\Http\Controllers\backend\ServiceController;
 use App\Http\Controllers\frontend\FrontendController;
 
 
@@ -25,6 +26,7 @@ Route::get('/', [FrontendController::class, 'homepage'])->name('home');
 //================================ Backend all routes ===================================//
 
 Route::middleware('auth')->group(function() {
+
     //admin dashboard
     Route::get('/dashboard', function () {
     return view('admin.pages.index');
@@ -64,6 +66,18 @@ Route::middleware('auth')->group(function() {
 
 
 
+    //----------------------Hero Section all route-----------------------//
+
+
+    Route::controller(ServiceController::class)->group(function() {
+        //all service page
+        Route::get('/all-serive', 'allService')->name('all.serive');
+
+        
+        
+    });
+
+    //----------------------End Hero Section all route-------------------//
 
 
 
