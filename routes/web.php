@@ -79,6 +79,9 @@ Route::middleware('auth')->group(function() {
         //store service
         Route::post('/store-service', 'storeService')->name('store.service');
 
+        //edit service
+        Route::get('/edit-service/{id}', 'editService')->name('edit.service');
+
         
         
     });

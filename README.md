@@ -49,3 +49,5 @@
 25. all serices page setup of admin dashboard
 
 26. add service page setup of admin dashboard
+
+27. store servies ot database

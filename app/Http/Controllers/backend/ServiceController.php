@@ -10,7 +10,7 @@ class ServiceController extends Controller
 {
     //all service page
     public function allService() {
-        $services = Service::all();
+        $services = Service::orderBy('created_at','DESC')->get();
         return view('backend.service.all_service', compact('services'));
     }
     
@@ -34,10 +34,19 @@ class ServiceController extends Controller
         ]);
 
         $notification = ([
-            'message'    => 'Service Add Successully',
+            'message'    => 'Service Added Successully',
             'alert-type' => 'info'
         ]);
 
         return redirect()->route('all.serive')->with($notification);
+
+    }//end store service 
+
+
+
+    //edit services
+    public function editService($id) {
+       $service = Service::findOrFail($id);
+       return view('backend.service.edit_service', compact('service'));
     }
 }
