@@ -26,12 +26,12 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false" aria-controls="uiComponents">
+            <a class="nav-link" data-bs-toggle="collapse" href="#uiComponents2" role="button" aria-expanded="false" aria-controls="uiComponents">
               <i class="link-icon" data-feather="feather"></i>
               <span class="link-title">Services</span>
               <i class="link-arrow" data-feather="chevron-down"></i>
             </a>
-            <div class="collapse" id="uiComponents">
+            <div class="collapse" id="uiComponents2">
               <ul class="nav sub-menu">
                 <li class="nav-item">
                   <a href="{{ route('add.service') }}" class="nav-link">Add Service</a>
@@ -41,6 +41,24 @@
                 </li>
               </ul>
             </div>
-          </li>         
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false" aria-controls="uiComponents">
+              <i class="link-icon" data-feather="feather"></i>
+              <span class="link-title">Portfolio</span>
+              <i class="link-arrow" data-feather="chevron-down"></i>
+            </a>
+            <div class="collapse" id="uiComponents">
+              <ul class="nav sub-menu">
+                <li class="nav-item">
+                  <a href="{{ route('add.recent.work') }}" class="nav-link">Add Recent Work</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ route('all.service') }}" class="nav-link">All Service</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+       </ul>
       </div>
     </nav>

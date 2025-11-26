@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\backend\HeroConroller;
 use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\ServiceController;
@@ -99,6 +100,14 @@ Route::middleware('auth')->group(function() {
 
     //resume download
     Route::get('/resume-downlaod', [HeroConroller::class, 'resumeDownload'])->name('resume.download');
+
+
+
+    //recent work all route
+    Route::controller(PortfolioController::class)->group(function () {
+        Route::get('/add-recent-work', 'addRecentWork')->name('add.recent.work');
+
+    });
 
 
 //================================ End Backend all routes ===================================//
